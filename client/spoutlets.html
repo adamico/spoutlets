@@ -1,0 +1,308 @@
+  <head>
+    <meta charset="utf-8">
+    <title>Spoutlets &mdash; vent your feelings</title>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable-no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="spoutlets.css">
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <div class="row">
+              <div class="span2 offset5">
+                  <a href="index.html"
+                     class="brand"><strong>Spoutlets</strong></a>
+              </div>
+              <div class="span3 offset2">
+
+                <ul class="nav pull-right">
+                  <li><a href="#"><i class="icon-white
+                                            icon-bookmark"></i></a></li>
+                  <li class="divider-vertical"></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"
+                       data-toggle="dropdown"><i class="icon-user
+                                                        icon-white"></i>
+                      greatbillsofire <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Logout</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header>
+      <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- Top Bar -->
+            <div class="row">
+              <!-- Breadcrumbs -->
+              <div class="span4 offset4">
+                <!-- FIXME needs css override -->
+                <ul class="breadcrumb" style="margin-bottom:0;">
+                  <li class="active">Everybody's entries</li>
+                </ul> 
+              </div> <!-- end of Breadcrumbs -->
+              <!-- Add an Entry -->
+              <div class="span4">
+                <!-- Button -->
+                <button class="btn btn-primary pull-right"
+                        type="button" data-toggle="modal"
+                        data-target="#myModal"><i class="icon-plus
+                                                         icon-white"></i> Add an entry
+                </button> <!-- end of Button -->
+                <!--- Modal --->
+                <div class="modal fade hide" id="myModal" tabindex="-1" role="dialog"
+                     aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                  <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">Jan 13 2013 entry</h3>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-horizontal">
+                      <div class="control-group">
+                        <label class="control-label">Describe what's going on with you</label>
+                        <div class="controls">
+                          <textarea rows="5" class="input-xlarge" placeholder="Write a bit about what happened, something you did, or how you're feeling... "></textarea>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">Upload an image capturing your feelings</label>
+                        <div class="controls">
+                          <input type="file" onchange="if (this.value) {
+                                                       $('#localSpinner').show();
+                                                       filepicker.uploadFile(this, function(data){
+                                                       $('#localResult').text(JSON.stringify(data));
+                                                       $('#localSpinner').hide();
+                                                       });
+                                                       }
+                                                       "/>
+                      
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">What's your mood?</label>
+                        <div class="controls">
+                          <label class="radio inline">
+                            <input type="radio" name="optionRadios" value="yellow"> yellow
+                          </label>
+                          <label class="radio inline">
+                            <input type="radio" name="optionRadios" value="green"> green
+                          </label>
+                          <label class="radio inline">
+                            <input type="radio" name="optionRadio" value="blue"> blue
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <form class="pull-left">
+                      <label class="checkbox inline">
+                        <input type="checkbox"> Keep it to myself
+                      </label>
+                      <label class="checkbox inline">
+                        <input type="checkbox" checked> Open to comments
+                      </label>
+                    </form>
+                    <button type="submit" class="btn btn-primary">Log it!</button>
+                  </div>
+                </div> <!-- end of Modal -->
+              </div> <!-- end of Add a Modal -->
+            </div> <!-- end of Top Bar -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <ul class="thumbnails">
+        <li class="span4">
+          <div class="thumbnail">
+            <img src="http://i.imgur.com/nkuXH.jpg" alt="">
+            <p class="caption"><small>After years of crippling
+                anxiety, I'm getting help. Went to a doc, adopting a
+                therapy cat, learning.</small></p>
+            <span class="caption"> <small>shared
+                by <a href="acti0nman.html"><i class="icon-user"></i>
+                  acti0nman</a></small></span>
+            <div class="row caption">
+              <span class="span2 muted">
+                <small>2 comments</small>
+              </span>
+              <span class="span1 muted">
+                <small>4 views</small>
+              </span>
+            </div>
+            <table class="table table-striped caption">
+              <tbody>
+                <tr>
+                  <td><p><small>You are not alone, my friend. I did
+                        something similar</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>CoffeeMan420</small></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><small>same here.</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>HallowedBeTheySlave</small></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><i class="icon-user"></i> <small>greatbillsofire</small></a>
+                    <textarea rows="3" placeholder="Add a comment..."></textarea>
+                    <button type="submit" class="btn btn-mini">Comment</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="span4">
+          <div class="thumbnail">
+            <img src="http://i.imgur.com/66guT.png" alt="">
+            <p class="caption"><small>Sometimes I draw silly pictures
+                of what my anxiety looks like and make fun of the
+                drawing. What are some things you do to help with your
+                anxiety?</small></p>
+            <span class="caption"> <small>shared
+                by <a href="#"><i class="icon-user"></i>
+                  tarotblades</a></small></span>
+            <div class="row caption">
+              <span class="span2 muted">
+                <small>5 comments</small>
+              </span>
+              <span class="span1 muted">
+                <small>10 views</small>
+              </span>
+            </div>
+            <table class="table table-striped caption">
+              <tbody>
+                <tr>
+                  <td><p><small>Things that help um, CBT therapy, and
+                        writing down how you feel and what you are thinking
+                        can really help you to calm down and be more
+                        logical. Distraction, playing video games, Sudoku,
+                        anything that get's you to focus outside of
+                        yourself.  Talking to others who have anxiety,
+                        really helps you not to feel so crazy :) Deep
+                        breathing, meditation, learning how to relax.
+                        Drinking water or hot tea or chewing gum.  Cleaning
+                        can help too as you're physically doing something so
+                        burning off the excess anxiety and it's a good
+                        distraction.  Positive thinking.  Taking random
+                        pictures and looking back on them helps when you're
+                        feeling down or like nothings going to improve. I
+                        think looking at happy pictures triggers off good
+                        memories and feelings.  Cut down on coffee and
+                        alcohol.  Eat well, take vitamins, omega 3.  Don't
+                        be hard on yourself.  That's all I can think of
+                        right now :)</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>Wichelle</small></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><small>When I was deep into my anxiety I tried
+                        this and it helped a lot. I made a character for
+                        all of fears, so that when I was feeling them I
+                        would picture the stupid character I drew as the
+                        one mocking me and bringing about my fears.  It
+                        worked very well at desensitizing myself from my
+                        fears and getting past them.</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>jenniferjuniper</small></a></td>
+                </tr>
+                <tr>
+                  <td><a href="#"><small>all 5
+                        comments</small></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><i class="icon-user"></i> <small>greatbillsofire</small></a>
+                    <textarea rows="3" placeholder="Add a comment..."></textarea>
+                    <button type="submit" class="btn btn-mini">Comment</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="span4">
+          <div class="thumbnail">
+            <img src="http://i.imgur.com/jWWsM.jpg" alt="">
+            <p class="caption"><small>Yesterday, I overcame most of my
+                anxiety issues to get this done. It represents a massive
+                change in my life and I wanted to share it. Anxiety has
+                caused me to never do anything remotely interesting,
+                especially if it's something that has the potential to
+                cause pain. Being able to see the entire tattoo process
+                through, including the waiting which was BY FAR the worst
+                bit, just proves to myself that I can actually do
+                something like this.</small></p>
+            <span class="caption"> <small>shared
+                by <a href="#"><i class="icon-user"></i>
+                  anxiousrabbittoid</a></small></span>
+            <div class="row caption">
+              <span class="span2 muted">
+                <small>9 comments</small>
+              </span>
+              <span class="span1 muted">
+                <small>15 views</small>
+              </span>
+            </div>
+            <table class="table table-striped caption">
+              <tbody>
+                <tr>
+                  <td><p><small>I'm guessing the anxiety issues caused
+                        a lot of fear surrounding the act of getting a
+                        tattoo. You know, fear that OP would have a
+                        change of heart and not like it later in life,
+                        worried about making a decision that might
+                        become a regret... stuff like that. Getting
+                        the tattoo represents being able to put those
+                        anxieties in their place.  As someone dealing
+                        with fairly crippling anxiety issues as well,
+                        I tip my hat. Even though you're making me
+                        anxious to get more ink
+                        myself... :P</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>Ehlmaris</small></a></td>
+                </tr>
+                <tr>
+                  <td><p><small>Very nice, I am not huge into tatoos,
+                  but that looks nice. Very clean lines. And congrats
+                  on becoming pro-active with your life :)</small></p>
+                    <a href="#"><i class="icon-user"></i> <small>Studenteternal</small></a></td>
+                </tr>
+                <tr>
+                  <td><a href="#"><small>all 9
+                        comments</small></a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><i class="icon-user"></i> <small>greatbillsofire</small></a>
+                    <textarea rows="3" placeholder="Add a comment..."></textarea>
+                    <button type="submit" class="btn btn-mini">Comment</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="../public/js/jquery-1.8.1.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
+  </body>
