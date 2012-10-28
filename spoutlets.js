@@ -16,6 +16,10 @@ if (Meteor.isClient) {
       console.log('GitHub success');
   });
 */
+
+  if (Meteor.user()) {
+    
+  }
 }
 
 if (Meteor.isServer) {
