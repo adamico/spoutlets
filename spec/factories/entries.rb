@@ -2,6 +2,11 @@
 
 FactoryGirl.define do
   factory :entry do
-    content ""
+    content "This is a reflection for an Entry"
+    anxiety_level "5"
+
+    factory :happy_entry do
+      happiness_level "5"
+    end
   end
 end

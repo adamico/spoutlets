@@ -24,7 +24,7 @@ describe EntriesController do
   # Entry. As you add validations to Entry, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "content" => "" }
+    { "content" => "hello" }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -36,7 +36,7 @@ describe EntriesController do
 
   describe "GET index" do
     it "assigns all entries as @entries" do
-      entry = Entry.create! valid_attributes
+      entry = FactoryGirl.create :entry
       get :index, {}, valid_session
       assigns(:entries).should eq([entry])
     end
@@ -44,7 +44,7 @@ describe EntriesController do
 
   describe "GET show" do
     it "assigns the requested entry as @entry" do
-      entry = Entry.create! valid_attributes
+      entry = FactoryGirl.create :entry
       get :show, {:id => entry.to_param}, valid_session
       assigns(:entry).should eq(entry)
     end
@@ -59,7 +59,7 @@ describe EntriesController do
 
   describe "GET edit" do
     it "assigns the requested entry as @entry" do
-      entry = Entry.create! valid_attributes
+      entry = FactoryGirl.create :entry
       get :edit, {:id => entry.to_param}, valid_session
       assigns(:entry).should eq(entry)
     end
@@ -105,7 +105,7 @@ describe EntriesController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested entry" do
-        entry = Entry.create! valid_attributes
+        entry = FactoryGirl.create :entry
         # Assuming there are no other entries in the database, this
         # specifies that the Entry created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -115,13 +115,13 @@ describe EntriesController do
       end
 
       it "assigns the requested entry as @entry" do
-        entry = Entry.create! valid_attributes
+        entry = FactoryGirl.create :entry
         put :update, {:id => entry.to_param, :entry => valid_attributes}, valid_session
         assigns(:entry).should eq(entry)
       end
 
       it "redirects to the entry" do
-        entry = Entry.create! valid_attributes
+        entry = FactoryGirl.create :entry
         put :update, {:id => entry.to_param, :entry => valid_attributes}, valid_session
         response.should redirect_to(entry)
       end
@@ -129,7 +129,7 @@ describe EntriesController do
 
     describe "with invalid params" do
       it "assigns the entry as @entry" do
-        entry = Entry.create! valid_attributes
+        entry = FactoryGirl.create :entry
         # Trigger the behavior that occurs when invalid params are submitted
         Entry.any_instance.stub(:save).and_return(false)
         put :update, {:id => entry.to_param, :entry => { "content" => "invalid value" }}, valid_session
@@ -137,7 +137,7 @@ describe EntriesController do
       end
 
       it "re-renders the 'edit' template" do
-        entry = Entry.create! valid_attributes
+        entry = FactoryGirl.create :entry
         # Trigger the behavior that occurs when invalid params are submitted
         Entry.any_instance.stub(:save).and_return(false)
         put :update, {:id => entry.to_param, :entry => { "content" => "invalid value" }}, valid_session
@@ -148,14 +148,14 @@ describe EntriesController do
 
   describe "DELETE destroy" do
     it "destroys the requested entry" do
-      entry = Entry.create! valid_attributes
+      entry = FactoryGirl.create :entry
       expect {
         delete :destroy, {:id => entry.to_param}, valid_session
       }.to change(Entry, :count).by(-1)
     end
 
     it "redirects to the entries list" do
-      entry = Entry.create! valid_attributes
+      entry = FactoryGirl.create :entry
       delete :destroy, {:id => entry.to_param}, valid_session
       response.should redirect_to(entries_url)
     end
